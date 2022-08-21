@@ -1,3 +1,12 @@
+/* google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Changa&family=Poppins:ital,wght@0,200;0,500;0,600;1,500&display=swap");
+
+.title-text {
+  font-size: 60px;
+  font-family: "Changa", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
 .bg-img {
   background-image: url("../images/bg-img.jpeg");
   height: 100vh;
