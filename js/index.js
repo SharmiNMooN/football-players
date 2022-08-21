@@ -47,3 +47,21 @@ function addPlayerToPlayerList(playerId) {
     playerList.appendChild(listItem);
   }
 }
+
+const calculatePlayerTotal = document.getElementById("calculate-player-total");
+const inputPerPlayer = document.getElementById("input-per-player");
+const playerTotalExpenses = document.getElementById("player-total-expenses");
+
+calculatePlayerTotal.addEventListener("click", function (event) {
+  const perPlayerCost = inputPerPlayer.value;
+  if (!perPlayerCost.length) {
+    alert("Input player per cost is empty");
+  } else if (perPlayerCost.length && isNaN(perPlayerCost)) {
+    alert("Input player per cost is not valid");
+  } else {
+    const numberOfPlayers = playerList.childElementCount;
+    const playerTotalCost = perPlayerCost * numberOfPlayers;
+    console.log(playerTotalCost);
+    playerTotalExpenses.innerText = `Player Expenses: $${playerTotalCost}`;
+  }
+});
