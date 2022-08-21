@@ -15,7 +15,7 @@
     <header class="bg-image bg-img">
         <div class="col-md-6 offset-md-3 text-center text-white h-100 d-flex justify-content-center align-items-center">
             <div class="text-center">
-                <h1 class="text-info font-weight-bold">Best Five Players</h1>
+                <h1 class="text-info font-weight-bold ">Best Five Players</h1>
                 <p>The creativity and zeal that typify "the beautiful game" of football (soccer) would render it an
                     art
                     form if not for the physical context within which the sport is played. What distinguishes
@@ -23,7 +23,9 @@
                     from most other sports is the freedom of expression granted to the players.</p>
 
             </div>
+
         </div>
+
     </header>
 
     <main class="bg-dark">
@@ -34,11 +36,11 @@
                 <div class="col-md-10 row mt-4">
                     <div class="col-md-4 mb-2 text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src="./images/player1.jpeg" alt="">
-                        <div>
-                            <h5 id="player-1 ">
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-1">
                                 Lionel Messi
                             </h5>
-                            <button class="btn btn-primary  w-100">
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-1')">
                                 Select
                             </button>
                         </div>
@@ -46,55 +48,65 @@
                     </div>
                     <div class="col-md-4 mb-2 text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src="./images/player2.jpeg" alt="">
-                        <h5 id="player-2">
-                            Neymar Jr
-                        </h5>
-                        <button class="btn btn-primary  w-100">
-                            Select
-                        </button>
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-2">
+                                Neymar Jr
+                            </h5>
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-2')">
+                                Select
+                            </button>
+                        </div>
 
                     </div>
                     <div class="col-md-4 mb-2 text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src="./images/player3.jpeg" alt="">
-                        <h5 id="player-3">
-                            Mohamed Salah
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-3">
+                                Mohamed Salah
 
-                        </h5>
-                        <button class="btn btn-primary  w-100">
-                            Select
-                        </button>
+                            </h5>
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-3')">
+                                Select
+                            </button>
+                        </div>
 
                     </div>
                     <div class="col-md-4 mb-2 text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src=" ./images/player4.jpeg" alt="">
-                        <h5 id="player-4">
-                            Cristiano Ronaldo
-                        </h5>
-                        <button class="btn btn-primary  w-100">
-                            Select
-                        </button>
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-4">
+                                Cristiano Ronaldo
+                            </h5>
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-4')">
+                                Select
+                            </button>
+                        </div>
 
                     </div>
                     <div class="col-md-4 mb-2 text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src="./images/player5.jpeg" alt="">
-                        <h5 id="player-5">
-                            Di maria
-                        </h5>
-                        <button class="btn btn-primary  w-100">
-                            Select
-                        </button>
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-5">
+                                Di maria
+                            </h5>
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-5')">
+                                Select
+                            </button>
+                        </div>
 
                     </div>
                     <div class="col-md-4  text-center text-center text-white">
                         <img class="img-fluid w-100 img-fixed" src="./images/player6.jpeg" alt="">
-                        <h5 id="player-6">
+                        <div class="d-grid gap-2 col-10 mx-auto">
+                            <h5 id="player-6">
 
-                            Robert Lewandowski
+                                Robert Lewandowski
 
-                        </h5>
-                        <button class="btn btn-primary  w-100">
-                            Select
-                        </button>
+                            </h5>
+                            <button class="btn btn-primary  w-100" onclick="addPlayerToPlayerList('player-6')">
+                                Select
+                            </button>
+                        </div>
 
                     </div>
 
@@ -105,12 +117,8 @@
                 <div class="col-md-2 text-white">
                     <div class="bg-secondary mt-4 p-3">
                         <h4>Selected Players</h4>
-                        <ol>
-                            <li>messi</li>
-                            <li>ronaldo</li>
-                            <li>neymar</li>
-                            <li>ronaldonio</li>
-                            <li>di-mario</li>
+                        <ol id="player-list">
+
                         </ol>
                     </div>
                     <div class="bg-secondary mt-4 p-2">
@@ -181,8 +189,9 @@
 
 
 
-
+    <script src="./js/index.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
