@@ -61,7 +61,30 @@ calculatePlayerTotal.addEventListener("click", function (event) {
   } else {
     const numberOfPlayers = playerList.childElementCount;
     const playerTotalCost = perPlayerCost * numberOfPlayers;
-    console.log(playerTotalCost);
-    playerTotalExpenses.innerText = `Player Expenses: $${playerTotalCost}`;
+    playerTotalExpenses.innerText = `${playerTotalCost}`;
+  }
+});
+
+const managerInput = document.getElementById("input-manager");
+const coachInput = document.getElementById("input-coach");
+const calculateTotal = document.getElementById("calculate-total");
+const totalExpenses = document.getElementById("total-expenses");
+
+calculateTotal.addEventListener("click", function (event) {
+  const managerCost = managerInput.value;
+  const coachCost = coachInput.value;
+
+  if (!managerCost.length || !coachCost.length) {
+    alert("Manager or Coach Input should not be empty");
+  } else if (managerCost.length && isNaN(managerCost)) {
+    alert("Input manager cost is not valid");
+  } else if (coachCost.length && isNaN(coachCost)) {
+    alert("Input coach cost is not valid");
+  } else {
+    const calculatedTotal =
+      Number(playerTotalExpenses.innerText) +
+      Number(managerCost) +
+      Number(coachCost);
+    totalExpenses.innerText = calculatedTotal;
   }
 });
